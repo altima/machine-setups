@@ -1,0 +1,21 @@
+# Allow running PowerShell scripts
+Update-ExecutionPolicy Unrestricted
+
+# Allow unattended reboots
+$Boxstarter.RebootOk=$true
+$Boxstarter.AutoLogin=$true
+
+# Update Windows and reboot if necessary
+Install-WindowsUpdate -AcceptEula
+if (Test-PendingReboot) { Invoke-Reboot }
+
+# Install prorgams
+cinst firefox
+cinst jre8
+cinst flashplayerplugin
+cinst notepadpluplus.install
+cinst 7zip.install
+cinst vlc
+cinst libreoffice-fresh
+cinst avgantivirusfree
+
