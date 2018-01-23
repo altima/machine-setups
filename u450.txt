@@ -1,17 +1,17 @@
 # Boxstarter options
 $Boxstarter.RebootOk=$true # Allow reboots?
-$Boxstarter.NoPassword=$true # Is this a machine with no login password?
+#$Boxstarter.NoPassword=$true # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
 # Basic setup
-Update-ExecutionPolicy Unrestricted
-Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
-Enable-RemoteDesktop
-Disable-InternetExplorerESC
-Disable-UAC
-Set-TaskbarSmall
+#Update-ExecutionPolicy Unrestricted
+#Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+#Enable-RemoteDesktop
+#Disable-InternetExplorerESC
+#Disable-UAC
+#Set-TaskbarSmall
 
-if (Test-PendingReboot) { Invoke-Reboot }
+#if (Test-PendingReboot) { Invoke-Reboot }
 
 # Update Windows and reboot if necessary
 Install-WindowsUpdate -AcceptEula
